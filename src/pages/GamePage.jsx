@@ -53,8 +53,9 @@ const ZONES = [
   {
     id: "zone-4",
     x: 148, y: 96, w: 16, h: 20,
-    title: "🍻 Aller boire un verre",
-    content: "Tu choisis le bar, je prends la première tournée :)"
+    title: "🗺️ Comment jouer",
+    content: "Il suffit de se promener sur la carte et d'ouvrir les différents bâtiments.\n\nChaque lieu cache une proposition.\n\nÀ la fin, tu pourras choisir... ou en inventer une meilleure."
+  
   },
 
   {
