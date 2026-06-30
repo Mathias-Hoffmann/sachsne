@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/hoffmannmathias/', // ⚠️ très important pour GitHub Pages
+  base: '/sachsne/', // ⚠️ très important pour GitHub Pages
 })
 
 
