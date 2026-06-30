@@ -38,9 +38,9 @@ const ZONES = [
 
   {
     id: "zone-2",
-    x: 8, y: 16, w: 12, h: 16,
-    title: "🗺️ Comment jouer",
-    content: "Il suffit de se promener sur la carte et d'ouvrir les différents bâtiments.\n\nChaque lieu cache une proposition.\n\nÀ la fin, tu pourras choisir... ou en inventer une meilleure."
+    x: 8, y: 60, w: 12, h: 16,
+    title: "🧗 Bouger un peu",
+    content: "Escalade, natation, course ou vélo."
   },
 
   {
@@ -64,12 +64,7 @@ const ZONES = [
     content: "Escalade, natation, course ou vélo."
   },
 
-  {
-    id: "zone-6",
-    x: 240, y: 120, w: 8, h: 16,
-    title: "🧺 Pique-nique dans le Bugey",
-    content: "Pique-nique dans le bugey.\n\nParce qu'à Lyon, il fait TROP CHAUUUUD !! ☀️"
-  },
+
 
   {
     id: "zone-7",
@@ -87,7 +82,7 @@ const ZONES = [
 
   {
     id: "zone-9",
-    x: 380, y: 36, w: 16, h: 16,
+    x: 380, y: 65, w: 16, h: 16,
     title: "✨ Ta proposition",
     content: "Ou alors... on oublie complètement mes idées."
   },
