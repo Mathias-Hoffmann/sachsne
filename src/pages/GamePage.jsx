@@ -61,14 +61,14 @@ const ZONES = [
     id: "zone-5",
     x: 216, y: 112, w: 20, h: 20,
     title: "🧗 Bouger un peu",
-    content: "Escalade, natation, course ou vélo.\n\nLe sport, c'est toujours plus sympa à deux."
+    content: "Escalade, natation, course ou vélo."
   },
 
   {
     id: "zone-6",
     x: 240, y: 120, w: 8, h: 16,
     title: "🧺 Pique-nique dans le Bugey",
-    content: "Direction le Bugey pour un pique-nique.\n\nParce qu'à Lyon, il fait vraiment TROP CHAUUUUD !! ☀️"
+    content: "Pique-nique dans le bugey.\n\nParce qu'à Lyon, il fait TROP CHAUUUUD !! ☀️"
   },
 
   {
@@ -98,7 +98,7 @@ const ZONES = [
 
     class MainScene extends Phaser.Scene {
       preload() {
-        const mapPath = `${import.meta.env.BASE_URL}images/home5.svg`;
+        const mapPath = `${import.meta.env.BASE_URL}images/home7.svg`;
         const playerPath = `${import.meta.env.BASE_URL}images/player.png`;
         this.load.image("map", mapPath);
         this.load.spritesheet("player", playerPath, { frameWidth: 32, frameHeight: 32 });
