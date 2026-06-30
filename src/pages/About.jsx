@@ -30,11 +30,12 @@ export default function About() {
   const introText =
     "Hi, I’m a French computer engineering student, with a strong interest in cognitive science. If you want to know more about me go to Game page.";
 
+  
   return (
     <div className="about-page">
       {/* Image papillon à gauche */}
       <img
-        src="/hoffmannmathias/images/portrait_butterfly.png"
+        src="hoffmannmathias-main\public\images\portrait_butterfly.png"
         alt="Portrait Butterfly"
         className="about-portrait"
       />

@@ -10,7 +10,7 @@ export default function BrainModel({
   setCardPosition
 }) {
   const groupRef = useRef()
-  const { nodes } = useGLTF('/hoffmannmathias/models/brain_areas.glb')
+  const { nodes } = useGLTF('/sachsne/models/brain_areas.glb')
   const meshNames = Object.keys(nodes).filter(key => nodes[key].isMesh)
   const { camera, gl } = useThree()
 
@@ -81,4 +81,4 @@ export default function BrainModel({
 }
 
 // (optionnel) préchargement du GLB
-useGLTF.preload('/hoffmannmathias/models/brain_areas.glb')
+useGLTF.preload('/sachsne/models/brain_areas.glb')

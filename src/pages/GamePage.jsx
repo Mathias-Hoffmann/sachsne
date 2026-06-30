@@ -29,72 +29,76 @@ export default function GamePage() {
 
     // Coordonnées natives dans l’espace du SVG (tu peux les remplacer par l'export)
 const ZONES = [
-  { 
-    id: "zone-1", 
-    x: 36, y: 108, w: 20, h: 20, 
-    title: "High School", 
-    content: "Graduated with honors in science and mathematics. Discovered a passion for engineering and technology through early projects and teamwork." 
-  },
-  { 
-    id: "zone-2", 
-    x: 8, y: 16, w: 12, h: 16, 
-    title: "Sport", 
-    content: "Endurance athlete. Competing in mountain trails, developing discipline, resilience, and team spirit." 
-  },
-  { 
-    id: "zone-3", 
-    x: 108, y: 160, w: 20, h: 24, 
-    title: "Preparatory Class", 
-    content: "Two years of intensive courses in mathematics, physics, and engineering sciences, preparing for entrance to France’s top engineering schools." 
-  },
-  { 
-    id: "zone-4", 
-    x: 148, y: 96, w: 16, h: 20, 
-    title: "London Aerospace", 
-    content: "Research internship in aeronautical design. Explored materials engineering and simulation tools in an international environment." 
-  },
-  { 
-    id: "zone-5", 
-    x: 216, y: 112, w: 20, h: 20, 
-    title: "Engineering School", 
-    content: "Currently studying at IMT Atlantique, one of France’s top engineering schools, specializing in data science and artificial intelligence." 
-  },
-  { 
-    id: "zone-6", 
-    x: 240, y: 120, w: 8, h: 16, 
-    title: "Volvo Group", 
-    content: "Engineering apprentice in production management and innovation. Leading improvement projects in a large industrial environment." 
-  },
-  { 
-    id: "zone-7", 
-    x: 328, y: 116, w: 20, h: 8, 
-    title: "Future", 
-    content: "Aspiring to explore cognitive and brain sciences, combining AI and neuroscience to build technologies that better understand human intelligence." 
-  },
-  { 
-    id: "zone-8", 
-    x: 304, y: 204, w: 16, h: 12, 
-    title: "Music", 
-    content: "Saxophonist for over 10 years. Passionate about jazz, electronic and Techno music. Creativity and emotion as daily sources of inspiration." 
+  {
+    id: "zone-1",
+    x: 36, y: 108, w: 20, h: 20,
+    title: "🐙 Quelques propositions",
+    content: "Salut !\n\nJ'ai trouvé ça vraiment sympa de te revoir.\n\nBon... je ne suis pas très fort en design ni en scénographie. Par contre, j'aime bien bidouiller des trucs.\n\nPromène-toi dedans, tu tomberas sur quelques propositions :)"
   },
 
+  {
+    id: "zone-2",
+    x: 8, y: 16, w: 12, h: 16,
+    title: "🗺️ Comment jouer",
+    content: "Il suffit de se promener sur la carte et d'ouvrir les différents bâtiments.\n\nChaque lieu cache une proposition.\n\nÀ la fin, tu pourras choisir... ou en inventer une meilleure."
+  },
 
-  
-  { 
-    id: "zone-9", 
-    x: 380, y: 36, w: 16, h: 16, 
-    title: "Mountain", 
-    content: "Trail runner and outdoor enthusiast. Regularly hiking and training for ultra-distance events in alpine environments." 
+  {
+    id: "zone-3",
+    x: 108, y: 160, w: 20, h: 24,
+    title: "🎭 Théâtre",
+    content: "Aller voir une pièce au Théâtre Comédie Odéon.\n\n🎟️ La Prière du Hamster — Vendredi à 20h."
+  },
+
+  {
+    id: "zone-4",
+    x: 148, y: 96, w: 16, h: 20,
+    title: "🍻 Aller boire un verre",
+    content: "Tu choisis le bar, je prends la première tournée :)"
+  },
+
+  {
+    id: "zone-5",
+    x: 216, y: 112, w: 20, h: 20,
+    title: "🧗 Bouger un peu",
+    content: "Escalade, natation, course ou vélo.\n\nLe sport, c'est toujours plus sympa à deux."
+  },
+
+  {
+    id: "zone-6",
+    x: 240, y: 120, w: 8, h: 16,
+    title: "🧺 Pique-nique dans le Bugey",
+    content: "Direction le Bugey pour un pique-nique.\n\nParce qu'à Lyon, il fait vraiment TROP CHAUUUUD !! ☀️"
+  },
+
+  {
+    id: "zone-7",
+    x: 328, y: 116, w: 20, h: 8,
+    title: "🍸 Moscow Mule",
+    content: "Mission : trouver le meilleur Moscow Mule du monde.\n\nAvec plein de glaçons 🧊. Toujours parce qu'il fait TROP CHAUUUUD !! ☀️"
+  },
+
+  {
+    id: "zone-8",
+    x: 304, y: 204, w: 16, h: 12,
+    title: "🍦 Glace",
+    content: "… pas besoin de préciser. 🌞"
+  },
+
+  {
+    id: "zone-9",
+    x: 380, y: 36, w: 16, h: 16,
+    title: "✨ Ta proposition",
+    content: "Ou alors... on oublie complètement mes idées."
   },
 ];
 
 
 
 
-
     class MainScene extends Phaser.Scene {
       preload() {
-        const mapPath = `${import.meta.env.BASE_URL}images/image2vector.svg`;
+        const mapPath = `${import.meta.env.BASE_URL}images/home5.svg`;
         const playerPath = `${import.meta.env.BASE_URL}images/player.png`;
         this.load.image("map", mapPath);
         this.load.spritesheet("player", playerPath, { frameWidth: 32, frameHeight: 32 });
@@ -264,7 +268,7 @@ const ZONES = [
 
       initPlacementTool(PLACE_GRID) {
         this.PLACE_GRID = PLACE_GRID;
-        this.placeMode = false;//ACTIVER/DESACTIVER PLACEMENT
+        this.placeMode = true;//ACTIVER/DESACTIVER PLACEMENT
         this.dragStart = null;
         this.draftZonesNative = [];
         this.showGrid = false; //ACTIVER/DESACTIVER GRILLE
